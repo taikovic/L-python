@@ -12,3 +12,6 @@ Dictionary	No	No**	{ } or dict()	{'Jun': 75, 'Jul': 89}
 if you leave the curly braces empty like this: {} Python will instead create an empty dictionary. 
 So to create an empty set, use set().
 ** A dictionary itself is mutable, but each of its individual keys must be immutable.
+***Comprehensive list: 
+[f(x) if condition else g(x) for x in sequence]
+[f(x) for x in sequence if condition]
