@@ -21,3 +21,4 @@ dict.keys() - Returns a sequence containing the keys in the dictionary
 dict.values() - Returns a sequence containing the values in the dictionary
 v) create a list for key dictionary:
  user_groups[user]=[key]
+if all(re.search(error_pattern,log.lower()) for i in range(xxxx)): check all are True... multiple true checks.
