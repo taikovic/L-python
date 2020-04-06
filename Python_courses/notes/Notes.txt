@@ -22,3 +22,17 @@ dict.values() - Returns a sequence containing the values in the dictionary
 v) create a list for key dictionary:
  user_groups[user]=[key]
 if all(re.search(error_pattern,log.lower()) for i in range(xxxx)): check all are True... multiple true checks.
+-------------------------- Debugging:
+*) Slowness: i/o-bounding (thread,task,process), cpu-bounding (calcul: process parallel)
+
+*) for crashes:
+(c/c++): 1- generate a core file: ulimit -c unlimited (core file with unlimited size).2-exec de script code 3- gdg -c core script_file (read de core file) 4- use of: (gdb) backtrace 5- use of (gdb) up, or list or print param
+(Python):1- pdb3 scritp.py 2-use of: (pdb) next (line by line) Or (pdb) continue (until pb line) 3- print(param)
+
+*) Memory Leaks: memory not released and optimize
+(c/c++) - use a memory profiler:valgrind
+(python) - use of; 
+for object: import sys, sys.getsizeof(xyz)
+for function or method: python -m memory_profiler script.py (put '@profile' decorator before the function)
+for application: use of top (linux) or install guppy: from guppy import hpy, h=hpy(),print h.heap()
+
