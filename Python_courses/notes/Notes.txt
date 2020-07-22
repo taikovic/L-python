@@ -35,4 +35,13 @@ if all(re.search(error_pattern,log.lower()) for i in range(xxxx)): check all are
 for object: import sys, sys.getsizeof(xyz)
 for function or method: python -m memory_profiler script.py (put '@profile' decorator before the function)
 for application: use of top (linux) or install guppy: from guppy import hpy, h=hpy(),print h.heap()
+============================ Puppet: ==============================================
+Using general modules (/usr/share/puppet/modules.available/)in manifest files (.pp):
+*) invoke in our .pp file: include ::module_name
+setting in master section autosign: sudo puppet config --section master set autosign true
+setting the server in the node(to which we sshed): sudo puppet config set server ubuntu.example.com
+sudo puppet agent -v --test (testing connection to the master: done manually)
+setting node definition: in manifest file site.pp stored at the root of the nodes prod environment; 
+(/etc/puppet/code/environments/production/manifests/)
+for tests: use: puppet parser validate (for syntax),r-spec tests, use canary environment.
 
