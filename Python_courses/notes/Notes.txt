@@ -40,8 +40,9 @@ Using general modules (/usr/share/puppet/modules.available/)in manifest files (.
 *) invoke in our .pp file: include ::module_name
 setting in master section autosign: sudo puppet config --section master set autosign true
 setting the server in the node(to which we sshed): sudo puppet config set server ubuntu.example.com
-sudo puppet agent -v --test (testing connection to the master: done manually)
+sudo puppet agent -v --test (testing connection to the master: run puppet client manually)
 setting node definition: in manifest file site.pp stored at the root of the nodes prod environment; 
 (/etc/puppet/code/environments/production/manifests/)
 for tests: use: puppet parser validate (for syntax),r-spec tests, use canary environment.
+adding new modules, think to add them to site.pp
 
