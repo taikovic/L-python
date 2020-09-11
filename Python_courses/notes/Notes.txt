@@ -10,18 +10,26 @@ Dictionary	No	No**	{ } or dict()	{'Jun': 75, 'Jul': 89}
 
 * You can use curly braces to define a set like this: {1, 2, 3}. However, 
 if you leave the curly braces empty like this: {} Python will instead create an empty dictionary. 
-So to create an empty set, use set().
-** A dictionary itself is mutable, but each of its individual keys must be immutable.
+So to create an empty set, use set()(for set: discard better than remove for inexistant item no error raised)
+*) A dictionary itself is mutable, but each of its individual keys must be immutable.
+*) use of Enumerate,zip().
+**) 
+- duplicate_list = orig_list (point to the same adress (id)). duplicate_list = orig_list[:], or list(orig_list),orig_list.copy()
+- pass an empty list as function param => def fct(list[:]) -> def fct(list=None)
 ***Comprehensive list: 
 [f(x) if condition else g(x) for x in sequence]
 [f(x) for x in sequence if condition]
 Iv*) for key in dictionary - Iterates over each key in the dictionary
 for key, value in dictionary.items() - Iterates over each key,value pair in the dictionary
-dict.keys() - Returns a sequence containing the keys in the dictionary
+dict.keys() - Returns a sequence containing the keys in the dictionary [dict.get(key,'error msg') better than dict[key]]
 dict.values() - Returns a sequence containing the values in the dictionary
 v) create a list for key dictionary:
  user_groups[user]=[key]
-if all(re.search(error_pattern,log.lower()) for i in range(xxxx)): check all are True... multiple true checks.
+if all(re.search(error_pattern,log.lower()) for i in range(xxxx)): check all are True... multiple true check
+vI) use generators instead of iterators.
+VII) any/all [list comprehension]: check for True...
+VIII) (is) for memory adress , and (==) for values.
+
 -------------------------- Debugging:
 *) Slowness: i/o-bounding (thread,task,process), cpu-bounding (calcul: process parallel)
 
